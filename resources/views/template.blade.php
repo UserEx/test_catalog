@@ -20,7 +20,7 @@
 
   <body>
 
-    <header class="container">
+    <header class="">
         @yield('header')    
         <div class="row" style="margin-bottom: 30px; ">
             <div class="col-lg-12">
@@ -35,7 +35,8 @@
         @yield('main')
     </main>
 
-    <footer style="margin-top: 60px;">
+    <footer class="" style="margin-top: 60px;">
+   		<hr>
         @yield('footer')
         <!-- Copyright &copy; Momo  -->
         <p class="text-center"><small>Copyright © 2018 Mukhamatinov Ildar</small></p>

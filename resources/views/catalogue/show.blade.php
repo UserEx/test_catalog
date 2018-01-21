@@ -1,29 +1,29 @@
 @extends('template')
 
 @section('main')
-	<h2 class="text-center" style="margin-bottom: 30px;">Категория товара</h2>
+	<h4 class="text-center" style="margin-bottom: 30px;">Категория товара</h4>
 	
 	<div class="row" style="margin-bottom: 10px;">
-		<div class="col-sm-4 text-right">
+		<div class="col-sm-5 text-right">
 			Идентификатор:
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-7">
         	{{ $category->getId() }}
         </div>
 	</div>
     <div class="row" style="margin-bottom: 10px;">
-        <div class="col-sm-4 m-l text-right">
+        <div class="col-sm-5 m-l text-right">
         	Название: 
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-7">
         	{{ $category->getTitle() }}
         </div>
     </div>
     <div class="row" style="margin-bottom: 10px;">
-        <div class="col-sm-4 text-right">
+        <div class="col-sm-5 text-right">
         	Путь:
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-7">
         	@php
         		$path = '';
         		$node = $category->getParent();
@@ -38,10 +38,10 @@
         </div>
     </div>
     <div class="row" style="margin-bottom: 10px;">
-        <div class="col-sm-4 text-right">
+        <div class="col-sm-5 text-right">
         	Подкатегории:
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-7">
         	<ul>
             	@foreach ($category->getChildren() as $child) 
             		<li>
@@ -52,7 +52,7 @@
         </div>
     </div>
     <div class="text-center" style="margin-top: 30px;">
-    	<button type="button" class="btn btn-primary"><a href="{{ route('index') }}" style="color: white;">Вернуться в каталог</a></button>
+    	<a class="btn btn-primary" href="{{ route('index') }}" style="color: white;">Вернуться в каталог</a>
     	
     </div>
 @endsection
