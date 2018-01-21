@@ -14,7 +14,7 @@
         @yield('head')
 
         {!! HTML::style('css/app.css') !!}
-        {!! HTML::style('bootstrap-treeview/app.css') !!}
+        {{--!! HTML::style('css/bootstrap-treeview.css') --}}
 
     </head>
 
@@ -22,13 +22,11 @@
 
     <header class="container">
         @yield('header')    
-        <div class="row">
+        <div class="row" style="margin-bottom: 30px; ">
             <div class="col-lg-12">
                 <hr>
                 <h2 class="intro-text text-center"><strong>Catalogue</strong></h2>
                 <hr>
-                <div id="catalogue">
-                </div>
             </div>
         </div>
     </header>
@@ -37,7 +35,7 @@
         @yield('main')
     </main>
 
-    <footer>
+    <footer style="margin-top: 60px;">
         @yield('footer')
         <!-- Copyright &copy; Momo  -->
         <p class="text-center"><small>Copyright © 2018 Mukhamatinov Ildar</small></p>

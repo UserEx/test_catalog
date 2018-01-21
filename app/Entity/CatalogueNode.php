@@ -30,7 +30,7 @@ class CatalogueNode
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="\App\Entity\CatalogueNode", mappedBy="parent")
+     * @ORM\OneToMany(targetEntity="\App\Entity\CatalogueNode", mappedBy="parent", fetch="EXTRA_LAZY")
      *
      */
     protected $children = null;

@@ -16,7 +16,8 @@ class CaralogueProvider extends ServiceProvider
      */
     public function boot()
     {       
-        Route::get('/', 'App\Http\Controllers\CatalogueController@index');
+        Route::get('/', 'App\Http\Controllers\CatalogueController@index')
+            ->name('index');
         Route::get('/{slug}', 'App\Http\Controllers\CatalogueController@showCategoryBySlug')
             ->where('slug', '([A-Za-z0-9\-\/]+)')
             ->name('showCategoryBySlug');

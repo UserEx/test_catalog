@@ -5,10 +5,10 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping\JoinTable;
 use Doctrine\ORM\Mapping\JoinColumn;
-
+use Doctrine\ORM\Mapping\Index;
 /**
  * @ORM\Entity
- * @ORM\Table (name = "slug")
+ * @ORM\Table (name = "slug", indexes={@Index(name="search_slug", columns={"slug"})})
  */
 class CatalogueSlug
 {
