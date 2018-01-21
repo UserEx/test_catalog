@@ -33,7 +33,7 @@ class CatalogueSlug
     /**
      * @var CatalogueNode
      *
-     * @ORM\ManyToOne(targetEntity="\App\Entity\CatalogueNode", inversedBy="slug", fetch="EAGER")
+     * @ORM\ManyToOne(targetEntity="\App\Entity\CatalogueNode", fetch="EAGER")
      * @ORM\JoinColumn(name="catalogue_id", referencedColumnName="id")
      */
     protected $catalogueNode;

@@ -38,7 +38,7 @@ class CatalogueNode
     /**
      * @var CatalogueNode
      * 
-     * @ORM\ManyToOne(targetEntity="\App\Entity\CatalogueNode", inversedBy="children")
+     * @ORM\ManyToOne(targetEntity="\App\Entity\CatalogueNode", inversedBy="children", fetch="EXTRA_LAZY")
      * @ORM\JoinColumn(name="parent_id", referencedColumnName="id")
      */
     protected $parent = null;
@@ -46,7 +46,7 @@ class CatalogueNode
     /**
      * @var CatalogueSlug
      * 
-     * @ORM\OneToOne(targetEntity="\App\Entity\CatalogueSlug", mappedBy="catalogueNode")
+     * @ORM\OneToOne(targetEntity="\App\Entity\CatalogueSlug", fetch="EAGER")
      * @ORM\JoinColumn(name="slug_id", referencedColumnName="id")
      */
     protected $slug = null;
